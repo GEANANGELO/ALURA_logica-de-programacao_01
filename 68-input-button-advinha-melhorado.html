@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<h1>vamos jogar, espero que goste</h1>
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+
+<script>
+	var segredo = Math.round(Math.random() * 10);
+	
+	var input = document.querySelector("input");
+	input.focus(); // focus() faz com que fique acessivel para digitar-mos novamente sem precisar clicar.
+
+	function verifica(){
+		if(input.value == segredo){
+			alert("você acertou! parabens..");
+		} else{
+			alert("infelismente você errou o numero digitado foi " + segredo);
+		}
+
+		input.value = "";    //apos o click do butão ele limpa o input
+		
+		input.focus();    //apos limpar o focus() faz com que fique acessivel para digitar-mos novamente.
+		
+		document.location.reload(true);  // Recarrega a página atual sem usar o cache
+
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+	
+</script>

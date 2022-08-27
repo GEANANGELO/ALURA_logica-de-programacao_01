@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<h1>vamos jogar, espero que goste</h1>
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+
+<script>
+	function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	var segredos = [5,7,10,2,3];
+	
+	var input = document.querySelector("input");
+	input.focus(); // focus() faz com que fique acessivel para digitar-mos novamente sem precisar clicar.
+
+	function verifica(){
+		
+		var achou = false;
+
+		for(var posicao = 0; posicao < segredos.length; posicao++){
+			if(input.value == segredos[posicao]){
+				alert("você acertou! parabens..");
+				achou = true;
+				break;
+			} 
+		}
+
+		if(achou == false) {
+			alert("infelismente você errou ");
+		}
+
+		input.value = "";    //apos o click do butão ele limpa o input
+
+		input.focus();    //apos limpar o focus() faz com que fique acessivel para digitar-mos novamente.
+		
+		document.location.reload(true);  // Recarrega a página atual sem usar o cache
+
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+	document.write("<br><br><br>")
+
+	document.write("o length da lista segredos é: "+ segredos.length);
+
+	
+</script>

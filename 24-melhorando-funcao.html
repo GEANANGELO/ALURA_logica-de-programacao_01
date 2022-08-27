@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+        document.write("<br><br>");
+    };
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+
+    };
+
+    var ano = 2016;
+    
+    mostra("Flávio tem " + (ano - 1977) + " anos");    
+    // pulaLinha();
+
+    mostra("Joaquim tem " + (ano - 1996) + " anos");    
+    // pulaLinha();
+
+    ano = 2017;   // aqui so vai alterar o ano do barney
+
+    mostra("Barney tem " + (ano - 1976) + " anos");    
+    // pulaLinha(); 
+
+    document.write("<br><br><br>")
+    mostra("Fim do programa!! TCHAU!");
+</script>
