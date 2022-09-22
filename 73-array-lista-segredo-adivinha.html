@@ -21,6 +21,12 @@
 		
 		var achou = false;
 
+//para var posicao = 0 ; 
+//equanto 'posição' for menor que 'o tamanho do array segredos'
+//posicao = posicao + 1
+//a varredura do laço continua até "input.value == segredos[posicao]"  ou até 
+//"posicao  'ser igual á'  segredos.length" ai se encerra o laço
+
 		for(var posicao = 0; posicao < segredos.length; posicao++){
 			if(input.value == segredos[posicao]){
 				alert("você acertou! parabens..");
@@ -28,7 +34,7 @@
 				break;
 			} 
 		}
-
+//		
 		if(achou == false) {
 			alert("infelismente você errou ");
 		}

@@ -13,32 +13,43 @@
     }
 
 
+    //1° criar a funcão para sorteio
     function sorteia() {
-
+    		//vai retornar um numero aleatorio
        return Math.round(Math.random() * 10);
 
     }
 
+    // 2°criar função que ira sortear a quantidade
+    //de numero
     function sorteiaNumeros(quantidade) {
-
+    	//aqui o array segredos começa vazio
         var segredos = [];
 
+        //'numero' e a variavel criada pra saber qts
+        //numeros ja foram sorteados e qebrar o laço
         var numero = 1;
 
+        //enquanto 'numero' for menor que o valor
+        //do parametro 'quantidade' faça 
         while(numero <= quantidade) {
 
               var numeroAleatorio = sorteia();
               var achou = false;
-
+              // se numeroAleatorio diferente de 0
+              //execute o teste
               if (numeroAleatorio !== 0) {
-                     for(var posicao = 0; posicao < segredos.length; posicao++) {
-
+            //aqui vamos percorrer a lista para saber
+             
+                    for(var posicao = 0; posicao < segredos.length; posicao++) {
+            //se 'numeroAleatorio' ja existe dentro 
+            //array segredos, se existir
                            if(segredos[posicao] == numeroAleatorio){
                                 achou = true;
                                 break;
                            }
 
-                     }
+                    }
 
                      if (achou == false) {
                            segredos.push(numeroAleatorio);
@@ -52,7 +63,11 @@
 
     }
 
-
+    // 3° criar  a variavel 'segredos' 
+    //que ira receber 
+    //uma lista(array) 
+    //de quatro numeros que
+    //a funcao sorteiaNumeros(4), sorteou
 	var segredos = sorteiaNumeros(4);
 	console.log(segredos);
 	

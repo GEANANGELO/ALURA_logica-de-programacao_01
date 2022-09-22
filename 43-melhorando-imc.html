@@ -24,24 +24,28 @@
         
         var imc = calculaImc(pesoInformado ,alturaInformada)
 
-        mostra(nome + " o seu IMC calculado é " + imc );
+        mostra(nome + " o seu IMC calculado é " + imc );    
 
         
-
-        //if(imc >= 18.5){
-            //if(imc <=35){
-                //mostra(" seu iMC está exelente");
-                //mostra("PARABÉNS!! CONTINUE ASSIM");
-           // }
-       // }
 
         if(imc < 18.5) {
             motra("voce esta abaixo do IMC ideal");
         }
 
+                //usando operadores relacionais, 
+                //temos linhas a menos
         if(imc >= 18.5 && imc <= 24){
             mostra("PARABÉNS!! seu iMC está exelente");
         }
+                //ESCREVENDO MUITO
+        /* 
+        if(imc >= 18.5){
+            if(imc <=35){
+                mostra(" seu iMC está exelente");
+                mostra("PARABÉNS!! CONTINUE ASSIM");
+            }
+        }
+        */
         
         if(imc >= 25 && imc <= 29){
             mostra("voce esta em SOBREPESO");

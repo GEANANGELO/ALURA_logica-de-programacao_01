@@ -19,9 +19,18 @@
 
     //abaixo faremos com for, compare
 
-    for(var multiplicador = 1; multiplicador <= 10; multiplicador = multiplicador + 1) {
-        mostra(1 * multiplicador);
+    function taboada(){
+        var multiplicador = parseInt(prompt('digite um numero para ver sua taboada: '));
+        for(var contador = 1; contador <= 10; contador++) {
+            mostra(`a tabuada de ${multiplicador} x ${contador} = ${multiplicador * contador}`) ;
+        }
     }
+
+    taboada();
+    
+
+
+    pulaLinha();
     mostra("fim da repetição");
 
 

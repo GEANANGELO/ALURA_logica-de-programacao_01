@@ -9,10 +9,12 @@
         pulaLinha();
     }
 
-    var multiplicador = 1;
-    while(multiplicador <= 10) {
-        mostra(1 * multiplicador);
-        multiplicador = multiplicador + 1;
+    var multiplicador = parseInt(prompt('digite um numero para ver sua taboada: '));
+    var contador = 1;
+            //enquanto multiplicador <= 10, faça
+    while(contador <= 10) {  
+        mostra(`a tabuada de ${multiplicador} x ${contador} = ${multiplicador * contador}`) ;
+        contador = contador + 1;
         
     }
     pulaLinha();

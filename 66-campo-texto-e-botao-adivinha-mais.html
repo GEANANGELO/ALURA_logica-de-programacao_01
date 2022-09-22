@@ -1,25 +1,37 @@
 <meta charset="utf-8">
 <h1>vamos jogar, espero que goste</h1>
 
-<input/>
-<button>Compare com o meu segredo</button>
+<input placeholder="digite um numero" />
+<button onclick = "verifica()">Compare com o meu segredo</button>
+
 
 
 <script>
+	/* 
 	var segredo = Math.round(Math.random() * 10);
 	var input = document.querySelector("input");
-
+	var button = document.querySelector("button");
+	*/
 	function verifica(){
+		var segredo = Math.round(Math.random() * 10);
+		var input = document.querySelector("input");
+		var button = document.querySelector("button");
 		if(input.value == segredo){
 			alert("você acertou! parabens..");
 		} else{
 			alert("infelismente você errou o numero digitado foi " + segredo);
 		}
+		input.value =''; //limpa o input,apos comparar
+		input.focus();  // o input vai ficar acessivel p/ digitar
 
 	}
 
-	var button = document.querySelector("button");
-	button.onclick = verifica;
+	//var button = document.querySelector("button");
+	//button.onclick = verifica;
+		//acima, todo o codigo de verifica, vai
+		//ser copiado pra dentro de button.onclick,
+		//sendo assim a funcao so é chamada no 
+		//click  do botão
 
 	
 </script>

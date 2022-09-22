@@ -12,7 +12,7 @@
         var loginInformado = prompt("Informe seu login");
         var senhaInformada = prompt("Informe sua senha");
 
-        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+        if( loginInformado == loginCadastrado  &&  senhaInformada == senhaCadastrada) {
 
             alert("Bem-vindo ao sistema, " + loginInformado);
            
@@ -31,9 +31,15 @@
            // }
         }
 
-       // vai para a próxima tentativa
-        tentativaAtual = tentativaAtual +1  
+        
+
+        // vai para a próxima tentativa
+        tentativaAtual = tentativaAtual + 1 
+
+
     }
+
+
 
 </script>
 <h1>Você acaba de entrar so sistema da alura</h1>

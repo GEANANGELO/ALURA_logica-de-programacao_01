@@ -11,23 +11,31 @@
             pulaLinha();
         }
 
-        var numeroPensado = Math.round(Math.random() * 10);
+        var numeroPensado = Math.round(Math.random()* 10);
         
         var tentativas = 1;    //variavael criada para dar tentativas ao usuario
 
-        while( tentativas <= 3) {   // enquanto tentativas for <= 3 repita o bloco abaixo
+        // enquanto tentativas for <= 3 repita o bloco abaixo
+        while( tentativas <= 3) {   
 
             var chute = parseInt(prompt("digite seu chute: "));
             
             if(chute == numeroPensado){
                 mostra("parabens voce acertou o numero Pensado foi  " + numeroPensado );
-                break; // ou tentativas = 4;     //aqui ele vai quebrar o while.
-            } else {
-                mostra("infelismente você errou o numero Pensado foi  " + numeroPensado + ", tente novamente!");
+                break; //aqui ele vai quebrar o while. 
+                // ou tentativas = 4;     
+            } else{
+                alert("infelismente você errou o numero Pensado , tente novamente!");
+
             }
 
-            tentativas++;   // aqui ele vai contar  e adicionar +1 a cada vez que o bloco de intrucçoes for lido, ate ficar maior que o 3 do laço de repetição 
-        }
+            tentativas++;
+
+            // aqui ele vai contar  e adicionar +1 a cada vez que o bloco de intrucçoes for lido, ate ficar maior que o 3 do laço de repetição          
+             
+        } 
+
         mostra("numero pensado foi " + numeroPensado);
+        //document.location.reload(true);
 
 </script>    
